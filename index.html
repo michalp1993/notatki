@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notatki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37aad3fa4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="menu">
+        <h1><i class="fa-solid fa-clipboard"></i>Notatki</h1>
+        <div class="button-menu">
+            <button class="addBtn"><i class="fa-regular fa-square-plus"></i>Dodaj</button>
+            <button class="catBtn"><i class="fa-solid fa-list"></i>Kategorie</button>
+            <button class="deleteAllBtn"><i class="fa-regular fa-calendar-xmark"></i>Usuń wszystkie</button>
+        </div>
+    </div>
+
+    <div class="noteArea">
+
+<!--
+        <div class="note shopping">
+            <div class="backgr"></div>
+            <div class="header">
+                <p>Zakupy</p><button class="delete"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="content">Lorem ipsum dolor,</div>
+        </div>
+        <div class="note job">
+            <div class="backgr"></div>
+            <div class="header">
+                <p>Zakupy</p><button class="delete"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="content">Lorem ipsum dolor sitt. </div>
+        </div>
+        <div class="note other">
+            <div class="backgr"></div>
+            <div class="header">
+                <p>Zakupy</p><button class="delete"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="content">Lorem</div>
+        </div>
+-->
+    </div>
+
+    <div class="addNote modal">
+        <h3>Dodaj notatkę</h3>
+        <label for="cathegory">Wybierz kategorię:</label>
+        <select id="cathegory">
+            <option value="0" disabled hidden selected>Wybierz kategorię</option>
+        </select>
+
+        <label for="newNoteArea">Wpisz treść notatki:</label>
+        <textarea id="newNoteArea" cols="30" rows="5" placeholder="Wpisz treść notatki"></textarea>
+        <p class="error errorNote">Uzupełnij wszystkie pola</p>
+        <div class="buttonArea">
+            <button class="save"><i class="fa-regular fa-floppy-disk"></i>Zapisz</button>
+            <button class="cancel"><i class="fa-regular fa-rectangle-xmark"></i>Anuluj</button>
+        </div>
+    </div>
+
+
+    <div class="catModal modal">
+        <h3>Kategorie</h3>
+        <label for="cathegoryList">Twoje kategorię:</label>
+        <select id="cathegoryList" size="5">
+            <option style="background-color: yellow;">dfsdfs</option>
+            <option style="background-color: yellow;">fbdfb</option>
+            <option style="background-color: yellow;">fb</option>
+        </select>
+        <p class="error errorCat">Uzupełnij wszystkie pola</p>
+        <div class="buttonArea">
+            <button class="addCatBtn"><i class="fa-regular fa-square-plus"></i>Dodaj</button>
+            <button class="editCatBtn"><i class="fa-regular fa-pen-to-square"></i>Edytuj</button>
+            <button class="deleteCat"><i class="fa-regular fa-square-minus"></i>Usuń</button>
+            <button class="closeCatModal"><i class="fa-regular fa-rectangle-xmark"></i>Wyjdź</button>
+        </div>
+    </div>
+
+    <div class="addCatModal modal">
+        <h3>Dodaj kategorie</h3>
+        <form class="addCatForm">
+            <label for="nameCatInput">Nazwa kategori:</label>
+            <input type="text" name="name" id="nameCatInput" style="margin-bottom: 5px;">
+            <label for="colorCatInput">Kolor kategori:</label>
+            <input type="color" name="color" id="colorCatInput" style="height: 20px; width: 93px;">
+        </form>
+        <p class="error errorAddCat">Uzupełnij wszystkie pola</p>
+        <div class="buttonArea">
+            <button class="saveCatBtn"><i class="fa-regular fa-square-plus"></i>Dodaj</button>
+            <button class="cancelAddCatBtn"><i class="fa-regular fa-rectangle-xmark"></i>Anuluj</button>
+        </div>
+    </div>
+
+    <div class="editCatModal modal">
+        <h3>Edytuj kategorie</h3>
+        <form class="editCatForm">
+            <label for="editNameCatInput">Nazwa kategori:</label>
+            <input type="text" name="name" id="editNameCatInput" style="margin-bottom: 5px;">
+            <label for="editColorCatInput">Kolor kategori:</label>
+            <input type="color" name="color" id="editColorCatInput" style="height: 20px; width: 93px;">
+        </form>
+        <p class="error errorEditCat">Uzupełnij wszystkie pola</p>
+        <div class="buttonArea">
+            <button class="saveEditCatBtn"><i class="fa-regular fa-square-plus"></i>Edytuj</button>
+            <button class="cancelEditCatBtn"><i class="fa-regular fa-rectangle-xmark"></i>Anuluj</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

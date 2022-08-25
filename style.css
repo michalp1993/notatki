@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: aliceblue;
+    --menu-color: #cce7ff;
+    --button-color: #004480;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--menu-color);
+    align-items: center;
+}
+
+.menu h1 {
+    font-size: 1.3rem;
+}
+
+.menu h1 i {
+    margin-right: 5px;
+}
+
+.menu button, .modal .buttonArea button {
+    padding: 3px;
+    margin-left: 10px;
+    font-size: 0.6rem;
+    background:none;
+    border: 1.7px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu button:hover, .modal .buttonArea button:hover {
+    background-color: var(--button-color);
+    color: var(--menu-color);
+    border-color: var(--button-color);
+    transform: scale(1.2);
+}
+
+.menu button i, .modal .buttonArea button i {
+    margin-right: 3px;
+}
+
+.noteArea {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 10px;
+}
+
+.shopping {
+    --noteColor: #00ff00;
+}
+
+.job {
+    --noteColor: #4d4dff;
+}
+
+.other {
+    --noteColor: #ffff00;
+}
+
+
+.note {
+    position: relative;
+    width: 150px;
+    background: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 100px;
+    overflow: hidden;
+
+}
+.note .backgr {
+    background-color: var(--noteColor);
+    background-image: url(https://img.freepik.com/darmowe-zdjecie/projektuje-astronautycznego-papier-textured-tlo_53876-42312.jpg?t=st=1657980478~exp=1657981078~hmac=f58a63728b696552709c0d6fcb778ee962fdbdd6b47bc57940abd949612c3f30&w=900);
+    background-blend-mode: multiply;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+
+}
+
+.note .header {
+    display: flex;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.note .header p {
+    font-size: 0.8rem;
+}
+
+.note .header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.note .content {
+    font-size: 0.6rem;
+    padding: 4px;
+}
+
+.modal {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--menu-color);
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 10px var(--button-color);
+    display: none;
+}
+
+.modal h3 {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.modal label {
+    font-size: 0.6rem;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.modal select {
+    font-size: 0.6rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--button-color);
+    margin-bottom: 10px;
+}
+
+.modal textarea {
+    font-size: 0.6rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--button-color);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.modal .error {
+    font-size: 0.5rem;
+    text-align: center;
+    color: rgb(183, 41, 41);
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+.modal .buttonArea {
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.categoryList {
+    list-style: none;
+    font-size: 0.6rem;
+    padding-left: 20px;
+}
+
+.categoryList .colorRound {
+    height: 10.86 px;
+    background-color: #00ff00;
+    width: 20px;
+    border-radius: 20%;
+}
+
+.categoryList div {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.catModal .buttonArea button {
+    width: 70px;
+    margin: 0px;
+    margin-bottom: 5px;
+}
